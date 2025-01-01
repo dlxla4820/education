@@ -4,7 +4,7 @@ server:
 
 spring:
   datasource:
-    url: ENC(LcxxF7yNNTIr4U9QA157+jbrA6vjvoy9PTwZCWs1cLGFo8ZLbiMs4G69CZh80BQK1LfBEFNjVYSQlif/LHS7VedgPYFQTaxre+sAsK/YOTZq9a8LHygX5tprgraUyC3d)
-    username: ENC(mqywLVTApBVxJ3SQPEIjJx8aEr6nl4b3+KCciYITvZKaasI3E0Z4mNay6BnCQCo6)
-    password: ENC(8ODncrL2xZVJqacebES7KpSb+rNLPYKMqgTEHz8uOtWs/pWRvU00l6/ImhmOYo9CN2EOMowsPZwZKKNlGcWMrw==)
+    url: ENC(MDmerrpXqrramVtKSXCjQECf/ZkoW7T2jdkMtzgbKuoKfBhQMBsCECaYdF/ljJTdTV4GO5sTYoB/sKfXgFToJ0lKztuBj+Gv/4D/8X038hbF8vZTpObs6KalEkhRWVRN)
+    username: ENC(XB9aBQBLeQzkCinzj9TCJw9R6dbgQjJcPqCgha7h6THdEI4xWUyewIjXWLllRd6Z)
+    password: ENC(7+M8fdG5rAhphAhFJMtOMhNMbYFKz6hisHnA5QE8r+XQ3j/JWArJXsRq+u3iYIhs9pctPgYKWCXNOr9R2fISwg==)
     driver-class-name: org.postgresql.Driver
