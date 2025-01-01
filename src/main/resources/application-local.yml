@@ -1,3 +1,10 @@
 server:
   shutdown: graceful
   port: 8080
+
+spring:
+  datasource:
+    url: ENC(LcxxF7yNNTIr4U9QA157+jbrA6vjvoy9PTwZCWs1cLGFo8ZLbiMs4G69CZh80BQK1LfBEFNjVYSQlif/LHS7VedgPYFQTaxre+sAsK/YOTZq9a8LHygX5tprgraUyC3d)
+    username: ENC(mqywLVTApBVxJ3SQPEIjJx8aEr6nl4b3+KCciYITvZKaasI3E0Z4mNay6BnCQCo6)
+    password: ENC(8ODncrL2xZVJqacebES7KpSb+rNLPYKMqgTEHz8uOtWs/pWRvU00l6/ImhmOYo9CN2EOMowsPZwZKKNlGcWMrw==)
+    driver-class-name: org.postgresql.Driver
