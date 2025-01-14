@@ -1,56 +1,38 @@
 package study.education.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
-import java.util.StringJoiner;
-import java.util.UUID;
 
-@Builder
+@Data
 @Entity
-@Getter
-@Table(name = "user")
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@Table(name = "users") // 테이블 이름 변경
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    @Builder.Default
-    private UUID uuid = UUID.randomUUID();
+    @Column(length = 50, nullable = false)
+    private String uuid;
 
-    @Column(name = "name")
+    @Column(length = 50, nullable = false)
     private String name;
 
-    @Column(name = "email")
+    @Column(length = 100, unique = true, nullable = false)
     private String email;
 
-    @Column(name = "password")
+    @Column(length = 255, nullable = false)
     private String password;
 
-    @Column(name = "role")
-    private String role;
-
-    @Column(name = "is_verified")
-    private Boolean isVerified;
-
-    @Column(name = "reg_date")
+    @CreationTimestamp
     private LocalDateTime regDate;
 
-    @Column(name = "mod_date")
+    @UpdateTimestamp
     private LocalDateTime modDate;
 
-    @Override
-    public String toString() {
-        return new StringJoiner(", ", User.class.getSimpleName() + "[", "]")
-                .add("uuid='" + uuid + "'")
-                .add("name='" + name + "'")
-                .add("email='" + email + "'")
-                .add("password='" + password + "'")
-                .add("role='" + role + "'")
-                .add("isVerified='" + isVerified + "'")
-                .add("regDate='" + regDate + "'")
-                .add("modDate='" + modDate + "'")
-                .toString();
-    }
+    @Column(length = 20, nullable = false)
+    private String role = "USER";
+
+    @Column(nullable = false)
+    private Boolean isVerified = false;
 }

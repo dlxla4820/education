@@ -3,11 +3,16 @@ server:
   port: 8080
 
 spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sf_database_name
+    username: james
+    password: sf_password
   jpa:
-    open-in-view: false
-    database: mysql
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
+#        hbm2ddl:
+#          auto: create
+    generate-ddl: true
     show-sql: true
 
 jasypt:
@@ -16,3 +21,9 @@ jasypt:
     property:
       prefix: ENC(
       suffix: )
+    password: testPassword
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql: TRACE
