@@ -17,11 +17,11 @@ import java.util.UUID;
 public class WebIdeController {
     private WebIdeService webIdeService;
 
-    @PostMapping("/quiz/{quizUuId}/code")
-    @ResponseBody
-    public ResponseEntity<?> codeRun(@PathVariable UUID quizUuId, @RequestBody CodeRunRequestDto requestBody) {
-        ResponseDto<?> response = webIdeService.codeRun(quizUuId, requestBody);
-        return new ResponseEntity<>(response.getData(), HttpStatus.valueOf(response.getCode()));
-    }
+//    @PostMapping("/quiz/{quizUuId}/code")
+//    @ResponseBody
+//    public ResponseEntity<?> codeRun(@PathVariable UUID quizUuId, @RequestBody CodeRunRequestDto requestBody) {
+//        ResponseDto<?> response = webIdeService.codeRun(quizUuId, requestBody);
+//        return new ResponseEntity<>(response.getData(), HttpStatus.valueOf(response.getCode()));
+//    }
 
 }
