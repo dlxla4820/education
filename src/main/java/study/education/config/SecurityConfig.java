@@ -12,7 +12,7 @@ public class SecurityConfig {
 
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-		return http.csrf().disable()
+		return http
 				.authorizeHttpRequests(auth -> auth
 						.requestMatchers("/signup", "/login").permitAll()
 						.anyRequest().authenticated()
@@ -21,7 +21,7 @@ public class SecurityConfig {
 						.loginPage("/login")
 						.loginProcessingUrl("/login")
 						.successHandler(new CustomAuthenticationSuccessHandler()) // 커스텀 핸들러 등록
-						.defaultSuccessUrl("/mypage")
+						.defaultSuccessUrl("/")
 						.permitAll()
 				)
 				.logout(logout -> logout

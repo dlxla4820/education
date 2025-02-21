@@ -24,10 +24,14 @@ public class LoginService {
 	}
 
 	public void registerUser(SignUpRequestDto signUpRequestDto) {
-		User user = User.builder()
-				.username(signUpRequestDto.getUsername())
-				.password(passwordEncoder.encode(signUpRequestDto.getPassword()))
-				.build();
-		userRepository.save(user);
+
+//		User user = User.builder()
+//				.(signUpRequestDto.getUsername())
+//				.password(passwordEncoder.encode(signUpRequestDto.getPassword()))
+//				.build();
+//		userRepository.save(user);
 	}
+
+
+
 }
