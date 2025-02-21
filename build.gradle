@@ -33,7 +33,7 @@ dependencies {
 
 
 	//docker client
-	implementation 'com.spotify:docker-client:8.16.1'
+	//implementation 'com.spotify:docker-client:8.16.1'
 
 
 	compileOnly 'org.projectlombok:lombok'

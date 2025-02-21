@@ -1,15 +1,11 @@
 server:
   shutdown: graceful
-  port: 8080
+  port: 8088
 
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/sf_database_name
-    username: james
-    password: sf_password
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
 #        hbm2ddl:
 #          auto: create
     generate-ddl: true
@@ -21,7 +17,6 @@ jasypt:
     property:
       prefix: ENC(
       suffix: )
-    password: testPassword
 
 logging:
   level:
