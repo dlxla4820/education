@@ -29,7 +29,7 @@ public class ProblemController {
         return mv;
     }
 
-    @GetMapping("/problem/{problemId}")
+    @GetMapping("/problem/{problemId}/edit")
     public ModelAndView getProblem(@PathVariable long problemId) {
         ModelAndView mv = new ModelAndView();
         ProblemDto problemDto = problemService.getProblemDtoById(problemId);
@@ -37,5 +37,8 @@ public class ProblemController {
         mv.setViewName("/problem/index");
         return mv;
     }
+
+
+
 
 }

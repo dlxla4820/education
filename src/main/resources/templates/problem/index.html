@@ -1735,7 +1735,7 @@
                                 <form class="text-left form-email row mx-0" data-success="Thanks for your enquiry, we'll be in touch shortly." data-error="Please fill in all fields correctly." data-recaptcha-sitekey="6LewhCIUAAAAACSwFvBDhgtTbw6EnW6e9dip8o2u" data-recaptcha-theme="light">
                                     <div class="col-md-6">
                                         <span>문제 제목:</span>
-                                        <input type="text" name="title" class="validate-required" />
+                                        <input type="text" name="title" class="validate-required" th:value="${problem != null ? problem.title : ''}" />
                                     </div>
                                     <div class="col-md-6">
                                         <span>난이도:</span>
@@ -1749,31 +1749,37 @@
                                     </div>
                                     <div class="col-md-6">
                                         <span>시간 제한:</span>
-                                        <input type="text" name="time_condition" class="validate-required" />
+                                        <input type="text" name="time_condition" class="validate-required"
+                                               th:value="${problem != null ? problem.timeCondition : ''}" />
                                     </div>
                                     <div class="col-md-6">
                                         <span>메모리 제한(MB):</span>
-                                        <input type="text" name="memory_condition" class="validate-required" />
+                                        <input type="text" name="memory_condition" class="validate-required"
+                                               th:value="${problem != null ? problem.memoryCondition : ''}" />
                                     </div>
                                     <div class="col-md-12">
                                         <span>정답(입력):</span>
-                                        <textarea rows="5" name="description" class="validate-required"></textarea>
+                                        <textarea rows="5" name="input_case" class="validate-required" th:text="${problem.inputCase}"></textarea>
                                     </div>
+
                                     <div class="col-md-12">
                                         <span>정답(출력):</span>
-                                        <textarea rows="5" name="description" class="validate-required"></textarea>
+                                        <textarea rows="5" name="output_case" class="validate-required" th:text="${problem.outputCase}"></textarea>
                                     </div>
+
                                     <div class="col-md-12">
                                         <span>문제 입력:</span>
-                                        <textarea name="description" class="validate-required" id="problem-description"></textarea>
+                                        <textarea name="content" class="validate-required" id="problem-description" th:text="${problem.content}"></textarea>
                                     </div>
+
                                     <div class="col-md-12">
                                         <span>제한사항 입력:</span>
-                                        <textarea name="description" class="validate-required" id="constraints-description"></textarea>
+                                        <textarea name="restrictions" class="validate-required" id="constraints-description" th:text="${problem.restrictions}"></textarea>
                                     </div>
+
                                     <div class="col-md-12">
                                         <span>입출력 예시 입력:</span>
-                                        <textarea name="description" class="validate-required" id="examples-description"></textarea>
+                                        <textarea name="example" class="validate-required" id="examples-description" th:text="${problem.example}"></textarea>
                                     </div>
                                     <div class="col-md-12 boxed">
                                         <button type="submit" class="btn btn--primary type--uppercase">SAVE</button>
