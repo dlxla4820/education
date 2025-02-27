@@ -33,10 +33,15 @@ dependencies {
 
 	// Spring Security 추가
 	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
 
+	implementation 'jakarta.persistence:jakarta.persistence-api'
+	implementation 'org.hibernate:hibernate-core:6.2.5.Final'
 	//docker client
 	//implementation 'com.spotify:docker-client:8.16.1'
 
+	//Gson
+	implementation 'com.google.code.gson:gson'
 
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'

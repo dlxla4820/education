@@ -1,4 +1,4 @@
-package enums;
+package study.education.enums;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

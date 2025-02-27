@@ -5,11 +5,11 @@
         <title>Stack Multipurpose HTML Template</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Site Description Here">
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/theme.css" rel="stylesheet" type="text/css" media="all" />
+        <link th:href="@{/css/bootstrap.css}" rel="stylesheet" type="text/css" media="all" />
+        <link th:href="@{/css/stack-interface.css}" rel="stylesheet" type="text/css" media="all" />
+        <link th:href="@{/css/socicon.css}" rel="stylesheet" type="text/css" media="all" />
+        <link th:href="@{/css/iconsmind.css}" rel="stylesheet" type="text/css" media="all" />
+        <link th:href="@{/css/theme.css}" rel="stylesheet" type="text/css" media="all" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
@@ -511,7 +511,7 @@
                                                                                         </a>
                                                                                     </li>
                                                                                     <li>
-                                                                                        <a href="page-accounts-login-1.html">
+                                                                                        <a href="account/login.html">
                                                                                             Login Simple
                                                                                         </a>
                                                                                     </li>
@@ -2279,11 +2279,11 @@
         <a class="back-to-top inner-link" href="#start" data-scroll-class="100vh:active">
             <i class="stack-interface stack-up-open-big"></i>
         </a>
-        <script src="js/jquery-3.1.1.min.js"></script>
-        <script src="js/typed.min.js"></script>
-        <script src="js/isotope.min.js"></script>
-        <script src="js/granim.min.js"></script>
-        <script src="js/smooth-scroll.min.js"></script>
-        <script src="js/scripts.js"></script>
+        <script th:src="@{/js/jquery-3.1.1.min.js}"></script>
+        <script th:src="@{/js/typed.min.js}"></script>
+        <script th:src="@{/js/isotope.min.js}"></script>
+        <script th:src="@{/js/granim.min.js}"></script>
+        <script th:src="@{/js/smooth-scroll.min.js}"></script>
+        <script th:src="@{/js/scripts.js}"></script>
     </body>
 </html>

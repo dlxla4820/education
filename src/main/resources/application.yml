@@ -11,6 +11,15 @@ spring:
     generate-ddl: true
     show-sql: true
 
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    check-template-location: true
+    cache: false
+  web:
+    resources:
+      static-locations: classpath:/static/
+
 jasypt:
   encryptor:
     bean: jasyptEncryptor
